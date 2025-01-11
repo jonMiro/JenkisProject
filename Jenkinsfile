@@ -23,11 +23,11 @@ pipeline {
                 script {
                     // Instal·lar les dependències del projecte, incloent ESLint si és necessari
                     echo 'Instal·lant dependències...'
-                    sh 'npm install'
+                    bat 'npm install'
 
                     // Executar el linter (ESLint) per revisar el codi
                     echo 'Executant Linter...'
-                    sh 'npx eslint .'
+                    bat 'npx eslint .'
 
                     // Si hi ha errors, la pipeline fallarà i es mostrarà el log d'errors
                     echo 'Linter finalitzat'
